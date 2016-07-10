@@ -1,0 +1,48 @@
+{
+  "name": "webpack-config-niksy",
+  "version": "0.0.0",
+  "description": "Webpack config for my projects.",
+  "main": "index.js",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint {index,test/index}.js && mocha test/index.js"
+  },
+  "dependencies": {
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.13.1",
+    "webpack-combine-loaders": "^2.0.0",
+    "webpack-merge": "^0.14.0",
+    "webpack-validator": "^2.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-config-niksy": "^2.1.0",
+    "mocha": "^2.5.3",
+    "webpack": "^1.13.1"
+  },
+  "peerDependencies": {
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "config",
+    "niksy",
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/webpack-config-niksy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/webpack-config-niksy/issues"
+  },
+  "homepage": "https://github.com/niksy/webpack-config-niksy#readme"
+}
