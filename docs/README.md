@@ -338,6 +338,7 @@ compiler.watch({}, function ( err, stats ) {
 * https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.mcv46sf6i
 * https://medium.com/@dabit3/beginner-s-guide-to-webpack-b1f1a3638460#.lu1am9i0r
 * https://medium.com/@soederpop/webpack-plugins-been-we-been-keepin-on-the-dll-cdfdd6cb8cd7#.z3m1jvnc2
+* https://github.com/d3viant0ne/awesome-webpack
 
 ### Testing
 
@@ -351,6 +352,8 @@ compiler.watch({}, function ( err, stats ) {
 * https://github.com/huston007/webpack-config-merger
 * https://github.com/madewithlove/webpack-config
 * https://github.com/jsdf/webpack-combine-loaders
+* https://github.com/clessg/progress-bar-webpack-plugin
+* https://github.com/lodash/lodash-webpack-plugin
 
 ### Browserify support
 
