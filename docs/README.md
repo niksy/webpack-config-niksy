@@ -355,6 +355,7 @@ compiler.watch({}, function ( err, stats ) {
 * https://github.com/clessg/progress-bar-webpack-plugin
 * https://github.com/lodash/lodash-webpack-plugin
 * https://github.com/robertknight/webpack-bundle-size-analyzer
+* https://github.com/mzgoddard/hard-source-webpack-plugin
 
 ### Browserify support
 
