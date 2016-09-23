@@ -175,16 +175,40 @@ module.exports = {
 		loaders: [
 			{
 				test: require.resolve('./input/exposed-module'), // 1
-				loader: 'expose?ExposedModule'
+				loader: 'expose',
+				query: {
+					ExposedModule: true
+				}
 			},
+			// or with string query
+			// {
+			// 	test: require.resolve('./input/exposed-module'), // 1
+			// 	loader: 'expose?ExposedModule'
+			// },
 			{
 				test: require.resolve('./input/exposed-module'), // 2
-				loader: 'imports?$=jquery'
+				loader: 'imports',
+				query: {
+					$: 'jquery'
+				}
 			},
+			// or with string query
+			// {
+			// 	test: require.resolve('./input/exposed-module'), // 2
+			// 	loader: 'imports?$=jquery'
+			// },
 			{
 				test: require.resolve('./input/exposed-module'), // 3
-				loader: 'exports?window.exposed'
+				loader: 'exports',
+				query: {
+					'window.exposed': true
+				}
 			},
+			// or with string query
+			// {
+			// 	test: require.resolve('./input/exposed-module'), // 3
+			// 	loader: 'exports?window.exposed'
+			// },
 			{
 				
 				test: /\.js$/, // 4
