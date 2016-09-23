@@ -34,6 +34,11 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'core',
 			filename: 'core.bundle.js'
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: true,
+			mangle: true,
+			comments: false
 		})
 	]
 };
