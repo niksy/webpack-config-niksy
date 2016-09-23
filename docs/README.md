@@ -201,7 +201,7 @@ module.exports = {
 		]
 	}
 	plugins: [
-		new StringReplacePlugin()
+		new StringReplacePlugin() // 4
 	]
 };
 ```
