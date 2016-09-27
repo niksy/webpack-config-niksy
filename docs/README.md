@@ -10,6 +10,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	entry: {
+		bootstrap: ['modernizr'],
 		core: ['jquery', 'underscore', './input/core.js'],
 		index: './input/index.js'
 	},
