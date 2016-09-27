@@ -5,7 +5,6 @@
 * Outputs with `[contenthash]` for proper file revving and long-term caching
 
 ```js
-var webpack = require('webpack');
 var config = require('webpack-config-niksy');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');

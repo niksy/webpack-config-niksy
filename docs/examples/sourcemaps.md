@@ -1,9 +1,6 @@
 # Sourcemaps
 
 ```js
-var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
-
 module.exports = {
 	// ...
 	devtool: 'inline-source-map',
