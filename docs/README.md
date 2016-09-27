@@ -2,7 +2,8 @@
 
 ## Sensible defaults
 
-"core" entry point contains common bundle with modules used throughout application adn is extracted with `CommonsChunkPlugin`
+* `bootstrap` and `core` entry points contain common modules used throughout application. [Order of files is important](https://github.com/webpack/webpack/issues/1016#issuecomment-182093533)
+* Every emitted file contains `[chunkhash]` so it gets changed only when file contents are changed for proper file revving and long-term caching
 
 ```js
 var webpack = require('webpack');
@@ -32,8 +33,8 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'core',
-			filename: 'core.bundle.js'
+			names: ['core', 'bootstrap'],
+			minChunks: Infinity
 		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: true,
