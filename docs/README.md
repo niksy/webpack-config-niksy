@@ -116,7 +116,7 @@ module.exports = {
 	},
 	plugins: [
 		// ...
-		new ExtractTextPlugin('[name].bundle.css')
+		new ExtractTextPlugin('[name]-[contenthash].css')
 	]
 };
 ```
