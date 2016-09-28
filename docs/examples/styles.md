@@ -3,6 +3,7 @@
 * Extracts style to separate CSS file
 * Runs Sass and PostCSS
 * Outputs with `[contenthash]` for proper file revving and long-term caching
+* `[contenthash]` is sliced to 10 characters with `[contenthash:10]` to keep it consistent with [rev-hash](https://github.com/sindresorhus/rev-hash)
 
 ```js
 var config = require('webpack-config-niksy');
@@ -51,7 +52,7 @@ module.exports = {
 	},
 	plugins: [
 		// ...
-		new ExtractTextPlugin('[name]-[contenthash].css')
+		new ExtractTextPlugin('[name]-[contenthash:10].css')
 	]
 };
 ```
