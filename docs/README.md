@@ -31,6 +31,8 @@
 ### Performance improvements
 
 * https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.yx0qgb24l
+* https://robertknight.github.io/posts/webpack-dll-plugins/
+* https://github.com/vigneshshanmugam/optimize-js-plugin
 
 ### Testing
 
@@ -48,6 +50,7 @@
 * https://github.com/lodash/lodash-webpack-plugin
 * https://github.com/robertknight/webpack-bundle-size-analyzer
 * https://github.com/mzgoddard/hard-source-webpack-plugin
+* https://github.com/NekR/offline-plugin
 
 ### Browserify support
 
