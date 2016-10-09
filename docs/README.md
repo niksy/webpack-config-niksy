@@ -28,6 +28,10 @@
 * https://medium.com/@soederpop/webpack-plugins-been-we-been-keepin-on-the-dll-cdfdd6cb8cd7#.z3m1jvnc2
 * https://github.com/d3viant0ne/awesome-webpack
 
+### Performance improvements
+
+* https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.yx0qgb24l
+
 ### Testing
 
 * http://joshhunt.is/testing-webpack-universal-javascript-in-node/
