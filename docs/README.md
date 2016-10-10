@@ -32,7 +32,6 @@
 
 * https://medium.com/@okonetchnikov/long-term-caching-of-static-assets-with-webpack-1ecb139adb95#.yx0qgb24l
 * https://robertknight.github.io/posts/webpack-dll-plugins/
-* https://github.com/vigneshshanmugam/optimize-js-plugin
 
 ### Testing
 
@@ -40,17 +39,14 @@
 
 ### Tools
 
-* https://github.com/survivejs/webpack-merge
-* https://github.com/robertknight/webpack-bundle-size-analyzer
-* https://github.com/js-dxtools/webpack-validator
-* https://github.com/huston007/webpack-config-merger
-* https://github.com/madewithlove/webpack-config
-* https://github.com/jsdf/webpack-combine-loaders
-* https://github.com/clessg/progress-bar-webpack-plugin
-* https://github.com/lodash/lodash-webpack-plugin
-* https://github.com/robertknight/webpack-bundle-size-analyzer
 * https://github.com/mzgoddard/hard-source-webpack-plugin
+* https://github.com/robertknight/webpack-bundle-size-analyzer
+* https://github.com/lodash/lodash-webpack-plugin
+* https://github.com/clessg/progress-bar-webpack-plugin
 * https://github.com/NekR/offline-plugin
+* https://github.com/FormidableLabs/webpack-dashboard
+* https://github.com/halt-hammerzeit/webpack-isomorphic-tools
+* https://github.com/vigneshshanmugam/optimize-js-plugin
 
 ### Browserify support
 
