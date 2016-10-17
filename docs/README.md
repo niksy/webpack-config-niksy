@@ -7,6 +7,7 @@
 * [Shim](examples/shim.md)
 * [Directory alias](examples/directory-alias.md)
 * [Loaders](examples/loaders.md)
+* [Long-term caching](examples/long-term-caching.md)
 * [API](examples/api.md)
 
 ## Additional resources
