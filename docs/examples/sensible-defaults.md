@@ -37,7 +37,9 @@ module.exports = {
 			minChunks: Infinity
 		}),
 		new webpack.optimize.UglifyJsPlugin({
-			compress: true,
+			compress: {
+				warnings: false
+			},
 			mangle: true,
 			comments: false
 		})
