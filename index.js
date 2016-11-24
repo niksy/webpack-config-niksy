@@ -66,7 +66,7 @@ module.exports.browserResolve = ( opts ) => {
 		cwd: opts.cwd
 	});
 
-	if ( !file.pkg && file.pkg.browser ) {
+	if ( file.pkg && !file.pkg.browser ) {
 		return {};
 	}
 	return mapValues(file.pkg.browser, ( value ) => {
