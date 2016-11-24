@@ -23,17 +23,18 @@ npm install webpack webpack-config-niksy --save
 Add this config to your `webpack.config.js`:
 
 ```js
-var config = require('webpack-config-niksy');
+const config = require('webpack-config-niksy');
 
 module.exports = config({
 	// Your config
 });
 ```
 
-Config module exposes two additional static methods:
+Config module exposes additional static methods:
 
 * [**config.mergeConfig**](#configmergeconfigconfig1-config2)
 * [**config.combineLoaders**](#configcombineloadersloaders)
+* [**config.browserResolve**](#configbrowserresolveopts)
 
 ## API
 
@@ -45,8 +46,7 @@ Returns: `Object`
 
 #### opts
 
-Type: `Object`  
-**Required**
+Type: `Object`
 
 Custom config.
 
@@ -78,10 +78,22 @@ Returns: `String`
 
 #### loaders
 
-Type: `Object[]`  
-**Required**
+Type: `Object[]`
 
 Array of loaders to combine to query string representation of loader.
+
+### config.browserResolve([opts])
+
+Returns: `Object`
+
+Resolves `browser` entries from package.json file. Useful for getting consistent values for [`alias`][webpack-resolve-alias] option and import/exports loader.
+
+#### cwd
+
+Type: `String`  
+Default: `process.cwd`
+
+Path from where to start looking for package.json file.
 
 ## License
 
@@ -93,4 +105,5 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [webpack-merge]: https://github.com/survivejs/webpack-merge
 [webpack-validator]: https://github.com/js-dxtools/webpack-validator
 [webpack-combine-loaders]: https://github.com/jsdf/webpack-combine-loaders
+[webpack-resolve-alias]: https://webpack.github.io/docs/configuration.html#resolve-alias
 [docs]: docs/README.md

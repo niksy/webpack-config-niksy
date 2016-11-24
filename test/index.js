@@ -1,9 +1,11 @@
 'use strict';
 
 const assert = require('assert');
+const path = require('path');
 const pick = require('lodash/pick');
 const webpack = require('webpack');
 const fn = require('../');
+const browserResolve = fn.browserResolve;
 
 describe('Loaders dependencies', function () {
 
@@ -61,6 +63,16 @@ describe('Config validation', function () {
 	it('should report invalid config', function () {
 		const errors = fn(require('./fixtures/invalid-config.input'), { returnValidation: true }).error.details;
 		assert.equal(errors.length, 3);
+	});
+
+});
+
+describe('Browser resolve', function () {
+
+	it('should properly resolve browser entries in package.json', function () {
+		assert.deepEqual(browserResolve({ cwd: path.resolve(__dirname, 'fixtures') }), {
+			jackie: 'fs'
+		});
 	});
 
 });
