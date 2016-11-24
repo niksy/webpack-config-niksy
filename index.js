@@ -33,7 +33,13 @@ module.exports = ( config, validationOptions ) => {
 				}
 			]
 		},
-		bail: true
+		bail: true,
+		resolve: {
+			modulesDirectories: ['node_modules'],
+			extensions: ['', '.json', '.js'],
+			packageMains: ['browser', 'main'],
+			packageAlias: 'browser'
+		}
 
 	}, validateConfig(config, merge({
 		rules: {

@@ -1,3 +1,7 @@
+'use strict';
+
+const path = require('path');
+
 module.exports = {
 	output: {
 		filename: '[name].bundle.js',
@@ -5,29 +9,6 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loader: 'style'
-			},
-			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loader: 'css',
-				query: {
-					sourceMap: true
-				}
-			},
-			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loaders: ['postcss']
-			},
-			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loader: 'sass?sourceMap'
-			},
 			{
 				test: /\.json$/,
 				loader: 'json'
@@ -43,6 +24,9 @@ module.exports = {
 	},
 	bail: true,
 	resolve: {
+		root: [
+			path.resolve(process.cwd())
+		],
 		modulesDirectories: ['node_modules'],
 		extensions: ['', '.json', '.js'],
 		packageMains: ['browser', 'main'],

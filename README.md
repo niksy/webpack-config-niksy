@@ -4,7 +4,11 @@
 
 [Webpack][webpack] config for my projects.
 
-Features sensible defaults like JSON support and no AMD support.
+Features:
+
+* JSON support
+* no AMD support
+* directory and module resolving closer to CommonJS standard
 
 **For some examples of common use cases, [see docs][docs].**
 

@@ -20,6 +20,10 @@ describe('Config', function () {
 		assert.deepStrictEqual(fn(require('./fixtures/default.input')), require('./fixtures/default.output'));
 	});
 
+	it('should handle default config with some options', function () {
+		assert.deepStrictEqual(fn(require('./fixtures/default-with-options.input')), require('./fixtures/default-with-options.output'));
+	});
+
 });
 
 describe('Loaders', function () {

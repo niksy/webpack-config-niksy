@@ -23,5 +23,11 @@ module.exports = {
 			}
 		]
 	},
-	bail: true
+	bail: true,
+	resolve: {
+		modulesDirectories: ['node_modules'],
+		extensions: ['', '.json', '.js'],
+		packageMains: ['browser', 'main'],
+		packageAlias: 'browser'
+	}
 };
