@@ -1,47 +1,49 @@
-var assert = require('assert');
-var pick = require('lodash/pick');
-var webpack = require('webpack');
-var fn = require('../');
+'use strict';
 
-describe('loaders dependencies', function () {
+const assert = require('assert');
+const pick = require('lodash/pick');
+const webpack = require('webpack');
+const fn = require('../');
 
-	it('all "dependencies" are defined in "peerDependencies"', function () {
-		var pkg = require('../package.json');
+describe('Loaders dependencies', function () {
+
+	it('should have all "dependencies" defined in "peerDependencies"', function () {
+		const pkg = require('../package.json');
 		assert.deepStrictEqual(pick(pkg.dependencies, ['json-loader', 'imports-loader']), pkg.peerDependencies);
 	});
 
 });
 
-describe('config', function () {
+describe('Config', function () {
 
-	it('default config', function () {
+	it('should handle default config', function () {
 		assert.deepStrictEqual(fn(require('./fixtures/default.input')), require('./fixtures/default.output'));
 	});
 
 });
 
-describe('loaders', function () {
+describe('Loaders', function () {
 
-	it('one custom loader', function () {
+	it('should handle one custom loader', function () {
 		assert.deepStrictEqual(fn(require('./fixtures/one-custom-loader.input')), require('./fixtures/one-custom-loader.output'));
 	});
 
-	it('multiple custom loaders', function () {
+	it('should handle multiple custom loaders', function () {
 		assert.deepStrictEqual(fn(require('./fixtures/multiple-custom-loaders.input')), require('./fixtures/multiple-custom-loaders.output'));
 	});
 
 });
 
-describe('plugins', function () {
+describe('Plugins', function () {
 
-	it('one custom plugin', function () {
-		var plugins = fn(require('./fixtures/one-custom-plugin.input')).plugins;
+	it('should handle one custom plugin', function () {
+		const plugins = fn(require('./fixtures/one-custom-plugin.input')).plugins;
 		assert.equal(plugins.length, 1);
 		assert.equal(plugins[0] instanceof webpack.optimize.CommonsChunkPlugin, true);
 	});
 
-	it('multiple custom plugins', function () {
-		var plugins = fn(require('./fixtures/multiple-custom-plugins.input')).plugins;
+	it('should handle multiple custom plugins', function () {
+		const plugins = fn(require('./fixtures/multiple-custom-plugins.input')).plugins;
 		assert.equal(plugins.length, 3);
 		assert.equal(plugins[0] instanceof webpack.DefinePlugin, true);
 		assert.equal(plugins[1] instanceof webpack.optimize.CommonsChunkPlugin, true);
@@ -50,10 +52,10 @@ describe('plugins', function () {
 
 });
 
-describe('config validation', function () {
+describe('Config validation', function () {
 
-	it('invalid config', function () {
-		var errors = fn(require('./fixtures/invalid-config.input'), { returnValidation: true }).error.details;
+	it('should report invalid config', function () {
+		const errors = fn(require('./fixtures/invalid-config.input'), { returnValidation: true }).error.details;
 		assert.equal(errors.length, 3);
 	});
 

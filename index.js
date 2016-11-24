@@ -1,7 +1,9 @@
-var validateConfig = require('webpack-validator');
-var mergeConfig = require('webpack-merge');
-var combineLoaders = require('webpack-combine-loaders');
-var merge = require('lodash/merge');
+'use strict';
+
+const validateConfig = require('webpack-validator');
+const mergeConfig = require('webpack-merge');
+const combineLoaders = require('webpack-combine-loaders');
+const merge = require('lodash/merge');
 
 /**
  * @param  {Object} config
@@ -9,7 +11,7 @@ var merge = require('lodash/merge');
  *
  * @return {Object}
  */
-module.exports = function ( config, validationOptions ) {
+module.exports = ( config, validationOptions ) => {
 	return mergeConfig({
 
 		output: {
