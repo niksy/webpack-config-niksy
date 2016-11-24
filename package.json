@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Webpack config for my projects.",
   "main": "index.js",
-  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
   "license": "MIT",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "eslint {index,test/index}.js && mocha test/index.js"
+    "test": "eslint '{index,test/**/*}.js' && mocha 'test/**/*.js'"
   },
   "dependencies": {
     "imports-loader": "^0.6.5",
@@ -20,9 +20,9 @@
     "webpack-validator": "^2.2.2"
   },
   "devDependencies": {
-    "eslint": "^2.13.1",
-    "eslint-config-niksy": "^2.1.0",
-    "mocha": "^2.5.3",
+    "eslint": "^3.1.1",
+    "eslint-config-niksy": "^3.0.1",
+    "mocha": "^3.1.2",
     "webpack": "^1.13.1"
   },
   "peerDependencies": {
