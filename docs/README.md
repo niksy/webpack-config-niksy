@@ -42,6 +42,7 @@
 
 * https://github.com/mzgoddard/hard-source-webpack-plugin
 * https://github.com/robertknight/webpack-bundle-size-analyzer
+* https://github.com/th0r/webpack-bundle-analyzer
 * https://github.com/lodash/lodash-webpack-plugin
 * https://github.com/clessg/progress-bar-webpack-plugin
 * https://github.com/NekR/offline-plugin
