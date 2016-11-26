@@ -14,7 +14,7 @@ module.exports = {
 		index: './input/index.js'
 	},
 	output: {
-		path: './output',
+		path: 'output',
 		publicPath: '//localhost/output/',
 		filename: '[name]-[chunkhash:10].js',
 		chunkFilename: '[id]-[chunkhash:10].js'
