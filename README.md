@@ -10,7 +10,7 @@ Features:
 * no AMD support
 * directory and module resolving closer to CommonJS standard
 
-**For some examples of common use cases, [see docs][docs].**
+**For some examples of common use cases, [see wiki][wiki].**
 
 ## Install
 
@@ -106,4 +106,4 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [webpack-validator]: https://github.com/js-dxtools/webpack-validator
 [webpack-combine-loaders]: https://github.com/jsdf/webpack-combine-loaders
 [webpack-resolve-alias]: https://webpack.github.io/docs/configuration.html#resolve-alias
-[docs]: docs/README.md
+[wiki]: https://github.com/niksy/webpack-config-niksy/wiki
