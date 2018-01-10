@@ -42,7 +42,6 @@ module.exports = ( config, validationOptions ) => {
 		},
 		resolve: {
 			modulesDirectories: ['node_modules'],
-			extensions: ['', '.json', '.js'],
 			packageMains: ['browser', 'main'],
 			packageAlias: 'browser'
 		}
