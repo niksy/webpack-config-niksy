@@ -37,23 +37,17 @@ Config module exposes additional static methods:
 
 ## API
 
-### config(opts, [validationOpts])
+### config(opts)
 
 Returns: `Object`
 
-[Merges custom config][webpack-merge] with default one and returns new config, [validating][webpack-validator] config options in the process.
+[Merges custom config][webpack-merge] with default one and returns new config.
 
 #### opts
 
 Type: `Object`
 
 Custom config.
-
-#### validationOpts
-
-Type: `Object`
-
-Options passed to [config validator][webpack-validator].
 
 ### config.mergeConfig(config1, config2)
 
@@ -90,6 +84,5 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [ci-img]: https://img.shields.io/travis/niksy/webpack-config-niksy.svg
 [webpack]: https://webpack.github.io/
 [webpack-merge]: https://github.com/survivejs/webpack-merge
-[webpack-validator]: https://github.com/js-dxtools/webpack-validator
 [webpack-resolve-alias]: https://webpack.github.io/docs/configuration.html#resolve-alias
 [wiki]: https://github.com/niksy/webpack-config-niksy/wiki

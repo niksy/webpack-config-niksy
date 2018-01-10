@@ -1,19 +1,16 @@
 'use strict';
 
-const validateConfig = require('webpack-validator');
 const mergeConfig = require('webpack-merge');
-const merge = require('lodash/merge');
 const mapValues = require('lodash/mapValues');
 const readPkgUp = require('read-pkg-up');
 const browserResolve = require('browser-resolve');
 
 /**
  * @param  {Object} config
- * @param  {Object} validationOptions
  *
  * @return {Object}
  */
-module.exports = ( config, validationOptions ) => {
+module.exports = ( config ) => {
 	return mergeConfig({
 
 		output: {
@@ -40,14 +37,7 @@ module.exports = ( config, validationOptions ) => {
 			]
 		}
 
-	}, validateConfig(config, merge({
-		rules: {
-			'no-root-files-node-modules-nameclash': true,
-			'loader-enforce-include-or-exclude': true,
-			'loader-prefer-include': true
-		},
-		quiet: true
-	}, validationOptions)));
+	}, config);
 };
 
 module.exports.mergeConfig = mergeConfig;
