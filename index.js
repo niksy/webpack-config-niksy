@@ -22,17 +22,21 @@ module.exports = ( config, validationOptions ) => {
 			chunkFilename: '[chunkhash].chunk.js'
 		},
 		module: {
-			loaders: [
+			rules: [
 				{
 					test: /\.json$/,
-					loader: 'json'
+					use: [{
+						loader: 'json-loader'
+					}]
 				},
 				{
 					test: /\.js$/,
-					loader: 'imports',
-					query: {
-						define: '>false'
-					}
+					use: [{
+						loader: 'imports-loader',
+						options: {
+							define: '>false'
+						}
+					}]
 				}
 			]
 		},
