@@ -80,7 +80,7 @@ Path from where to start looking for package.json file.
 MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/webpack-config-niksy
-[ci-img]: https://img.shields.io/travis/niksy/webpack-config-niksy.svg
+[ci-img]: https://travis-ci.org/niksy/webpack-config-niksy.svg?branch=master
 [webpack]: https://webpack.github.io/
 [webpack-merge]: https://github.com/survivejs/webpack-merge
 [webpack-resolve-alias]: https://webpack.github.io/docs/configuration.html#resolve-alias
