@@ -40,7 +40,6 @@ module.exports = ( config, validationOptions ) => {
 				}
 			]
 		},
-		bail: true,
 		resolve: {
 			modulesDirectories: ['node_modules'],
 			extensions: ['', '.json', '.js'],
