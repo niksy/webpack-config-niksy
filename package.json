@@ -17,7 +17,7 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.13.1",
     "read-pkg-up": "^2.0.0",
-    "webpack-merge": "^0.14.0",
+    "webpack-merge": "^4.1.1",
     "webpack-validator": "^2.2.2"
   },
   "devDependencies": {
