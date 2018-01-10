@@ -2,19 +2,9 @@
 
 const assert = require('assert');
 const path = require('path');
-const pick = require('lodash/pick');
 const webpack = require('webpack');
 const fn = require('../');
 const browserResolve = fn.browserResolve;
-
-describe('Loaders dependencies', function () {
-
-	it('should have all "dependencies" defined in "peerDependencies"', function () {
-		const pkg = require('../package.json');
-		assert.deepStrictEqual(pick(pkg.dependencies, ['json-loader', 'imports-loader']), pkg.peerDependencies);
-	});
-
-});
 
 describe('Config', function () {
 
@@ -54,15 +44,6 @@ describe('Plugins', function () {
 		assert.equal(plugins[0] instanceof webpack.DefinePlugin, true);
 		assert.equal(plugins[1] instanceof webpack.optimize.CommonsChunkPlugin, true);
 		assert.equal(plugins[2] instanceof webpack.optimize.UglifyJsPlugin, true);
-	});
-
-});
-
-describe('Config validation', function () {
-
-	it('should report invalid config', function () {
-		const errors = fn(require('./fixtures/invalid-config.input'), { returnValidation: true }).error.details;
-		assert.equal(errors.length, 3);
 	});
 
 });

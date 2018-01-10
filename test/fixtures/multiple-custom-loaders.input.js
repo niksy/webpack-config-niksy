@@ -1,28 +1,39 @@
 module.exports = {
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loader: 'style'
+				use: [{
+					loader: 'style-loader'
+				}]
 			},
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loader: 'css',
-				query: {
-					sourceMap: true
-				}
+				use: [{
+					loader: 'css-loader',
+					options: {
+						sourceMap: true
+					}
+				}]
 			},
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loaders: ['postcss']
+				use: [{
+					loader: 'postcss-loader'
+				}]
 			},
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loader: 'sass?sourceMap'
+				use: [{
+					loader: 'sass-loader',
+					options: {
+						sourceMap: true
+					}
+				}]
 			}
 		]
 	}

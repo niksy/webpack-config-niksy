@@ -4,30 +4,19 @@ module.exports = {
 		chunkFilename: '[chunkhash].chunk.js'
 	},
 	module: {
-		loaders: [
+		rules: [
+			{
+				parser: {
+					amd: false
+				}
+			},
 			{
 				test: /\.css$/,
 				include: /local_modules/,
-				loader: 'style'
-			},
-			{
-				test: /\.json$/,
-				loader: 'json'
-			},
-			{
-				test: /\.js$/,
-				loader: 'imports',
-				query: {
-					define: '>false'
-				}
+				use: [{
+					loader: 'style-loader'
+				}]
 			}
 		]
-	},
-	bail: true,
-	resolve: {
-		modulesDirectories: ['node_modules'],
-		extensions: ['', '.json', '.js'],
-		packageMains: ['browser', 'main'],
-		packageAlias: 'browser'
 	}
 };

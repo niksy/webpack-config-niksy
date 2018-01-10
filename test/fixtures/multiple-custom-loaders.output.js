@@ -4,48 +4,46 @@ module.exports = {
 		chunkFilename: '[chunkhash].chunk.js'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loader: 'style'
-			},
-			{
-				test: /\.scss$/,
-				include: /local_modules/,
-				loader: 'css',
-				query: {
-					sourceMap: true
+				parser: {
+					amd: false
 				}
 			},
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loaders: ['postcss']
+				use: [{
+					loader: 'style-loader'
+				}]
 			},
 			{
 				test: /\.scss$/,
 				include: /local_modules/,
-				loader: 'sass?sourceMap'
+				use: [{
+					loader: 'css-loader',
+					options: {
+						sourceMap: true
+					}
+				}]
 			},
 			{
-				test: /\.json$/,
-				loader: 'json'
+				test: /\.scss$/,
+				include: /local_modules/,
+				use: [{
+					loader: 'postcss-loader'
+				}]
 			},
 			{
-				test: /\.js$/,
-				loader: 'imports',
-				query: {
-					define: '>false'
-				}
+				test: /\.scss$/,
+				include: /local_modules/,
+				use: [{
+					loader: 'sass-loader',
+					options: {
+						sourceMap: true
+					}
+				}]
 			}
 		]
-	},
-	bail: true,
-	resolve: {
-		modulesDirectories: ['node_modules'],
-		extensions: ['', '.json', '.js'],
-		packageMains: ['browser', 'main'],
-		packageAlias: 'browser'
 	}
 };

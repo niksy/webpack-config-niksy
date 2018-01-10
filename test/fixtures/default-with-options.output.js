@@ -8,28 +8,17 @@ module.exports = {
 		chunkFilename: '[chunkhash].chunk.js'
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
-				test: /\.json$/,
-				loader: 'json'
-			},
-			{
-				test: /\.js$/,
-				loader: 'imports',
-				query: {
-					define: '>false'
+				parser: {
+					amd: false
 				}
 			}
 		]
 	},
-	bail: true,
 	resolve: {
 		root: [
 			path.resolve(process.cwd())
-		],
-		modulesDirectories: ['node_modules'],
-		extensions: ['', '.json', '.js'],
-		packageMains: ['browser', 'main'],
-		packageAlias: 'browser'
+		]
 	}
 };

@@ -1,10 +1,12 @@
 module.exports = {
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.css$/,
 				include: /local_modules/,
-				loader: 'style'
+				use: [{
+					loader: 'style-loader'
+				}]
 			}
 		]
 	}
