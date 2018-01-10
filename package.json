@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "browser-resolve": "^1.11.2",
-    "imports-loader": "^0.6.5",
     "lodash": "^4.13.1",
     "read-pkg-up": "^2.0.0",
     "webpack-merge": "^4.1.1"
@@ -23,9 +22,6 @@
     "eslint-config-niksy": "^3.0.1",
     "mocha": "^3.1.2",
     "webpack": "^1.13.1"
-  },
-  "peerDependencies": {
-    "imports-loader": "^0.6.5"
   },
   "engines": {
     "node": ">=4"

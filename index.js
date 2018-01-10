@@ -20,13 +20,9 @@ module.exports = ( config ) => {
 		module: {
 			rules: [
 				{
-					test: /\.js$/,
-					use: [{
-						loader: 'imports-loader',
-						options: {
-							define: '>false'
-						}
-					}]
+					parser: {
+						amd: false
+					}
 				}
 			]
 		}
