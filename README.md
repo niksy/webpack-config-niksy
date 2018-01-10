@@ -64,7 +64,7 @@ Type: `Object`
 
 ### config.browserResolve([opts])
 
-Returns: `Object`
+Returns: `Promise`
 
 Resolves `browser` entries from package.json file. Useful for getting consistent values for [`alias`][webpack-resolve-alias] option and import/exports loader.
 

@@ -51,9 +51,12 @@ describe('Plugins', function () {
 describe('Browser resolve', function () {
 
 	it('should properly resolve browser entries in package.json', function () {
-		assert.deepEqual(browserResolve({ cwd: path.resolve(__dirname, 'fixtures') }), {
-			jackie: 'fs'
-		});
+		return browserResolve({ cwd: path.resolve(__dirname, 'fixtures') })
+			.then(( value ) => {
+				assert.deepEqual(value, {
+					jackie: 'fs'
+				});
+			});
 	});
 
 });
