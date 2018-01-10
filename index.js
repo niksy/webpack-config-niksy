@@ -41,9 +41,7 @@ module.exports = ( config, validationOptions ) => {
 			]
 		},
 		resolve: {
-			modulesDirectories: ['node_modules'],
-			packageMains: ['browser', 'main'],
-			packageAlias: 'browser'
+			modulesDirectories: ['node_modules']
 		}
 
 	}, validateConfig(config, merge({
