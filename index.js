@@ -39,9 +39,6 @@ module.exports = ( config, validationOptions ) => {
 					}]
 				}
 			]
-		},
-		resolve: {
-			modulesDirectories: ['node_modules']
 		}
 
 	}, validateConfig(config, merge({
