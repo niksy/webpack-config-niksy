@@ -33,7 +33,6 @@ module.exports = config({
 Config module exposes additional static methods:
 
 * [**config.mergeConfig**](#configmergeconfigconfig1-config2)
-* [**config.combineLoaders**](#configcombineloadersloaders)
 * [**config.browserResolve**](#configbrowserresolveopts)
 
 ## API
@@ -70,18 +69,6 @@ Type: `Object`
 
 Type: `Object`
 
-### config.combineLoaders(loaders)
-
-Returns: `String`
-
-[Combines array of loaders][webpack-combine-loaders] in object format to query string format.
-
-#### loaders
-
-Type: `Object[]`
-
-Array of loaders to combine to query string representation of loader.
-
 ### config.browserResolve([opts])
 
 Returns: `Object`
@@ -104,6 +91,5 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 [webpack]: https://webpack.github.io/
 [webpack-merge]: https://github.com/survivejs/webpack-merge
 [webpack-validator]: https://github.com/js-dxtools/webpack-validator
-[webpack-combine-loaders]: https://github.com/jsdf/webpack-combine-loaders
 [webpack-resolve-alias]: https://webpack.github.io/docs/configuration.html#resolve-alias
 [wiki]: https://github.com/niksy/webpack-config-niksy/wiki

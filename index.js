@@ -2,7 +2,6 @@
 
 const validateConfig = require('webpack-validator');
 const mergeConfig = require('webpack-merge');
-const combineLoaders = require('webpack-combine-loaders');
 const merge = require('lodash/merge');
 const mapValues = require('lodash/mapValues');
 const readPkgUp = require('read-pkg-up');
@@ -51,7 +50,6 @@ module.exports = ( config, validationOptions ) => {
 	}, validationOptions)));
 };
 
-module.exports.combineLoaders = combineLoaders;
 module.exports.mergeConfig = mergeConfig;
 module.exports.browserResolve = ( opts ) => {
 
