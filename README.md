@@ -6,7 +6,6 @@
 
 Features:
 
-* JSON support
 * no AMD support
 * directory and module resolving closer to CommonJS standard
 

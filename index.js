@@ -20,12 +20,6 @@ module.exports = ( config ) => {
 		module: {
 			rules: [
 				{
-					test: /\.json$/,
-					use: [{
-						loader: 'json-loader'
-					}]
-				},
-				{
 					test: /\.js$/,
 					use: [{
 						loader: 'imports-loader',
