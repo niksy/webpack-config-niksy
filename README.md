@@ -1,3 +1,11 @@
+![Deprecated project](https://img.shields.io/badge/status-deprecated-red.svg)
+
+**This project is deprecated.**
+
+Most of the features available here can be achieved with modern Webpack configuration properties.
+
+---
+
 # webpack-config-niksy
 
 [![Build Status][ci-img]][ci]
